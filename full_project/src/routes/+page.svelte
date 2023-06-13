@@ -1,0 +1,13 @@
+<script>
+  import db from '/src/db.js';
+  import url from '/src/lib/images/demo.svg';
+  let status = db.connection;
+  let name = 'World';
+</script>
+<form>
+  <label for="name" >What is your name?</label>
+  <input type="text" class='name' bind:value={name} />
+</form>
+<h1>Hello, {name}!</h1>
+<p>{status}</p>
+<img src={url} alt='demo'>
